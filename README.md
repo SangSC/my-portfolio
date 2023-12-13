@@ -10,7 +10,7 @@ This portfolio is inspired by the following video:
 Tools used:
 - React - Next.js
 - Tailwind CSS
-- Node.js
+- npm
 - Shadcn UI
 - Framer-Motion
 - EmailJS
