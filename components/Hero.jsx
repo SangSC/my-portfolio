@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 
 import {
@@ -17,13 +20,13 @@ import Socials from "./Socials";
 
 const Hero = () => {
   return (
-    <section
-      className="py-6 xl:py-10 h-[84vh] xl:pt-10 bg-hero bg-no-repeat bg-bottom dark:bg-none"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <div className="container mx-auto">
+    <section className="py-6 xl:py-10 h-[84vh] xl:pt-10 bg-hero bg-no-repeat bg-bottom dark:bg-none">
+      <motion.div
+        className="container mx-auto"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <div className="flex justify-between gap-x-8">
           {/* image */}
           <div className="hidden xl:flex relative">
@@ -51,10 +54,12 @@ const Hero = () => {
                   <Send size={18} />
                 </Button>
               </Link>
-              <Button variant="secondary" className="gap-x-2">
-                Download CV
-                <Download size={18} />
-              </Button>
+              <a href="/resume.pdf" download>
+                <Button variant="secondary" className="gap-x-2">
+                  Download CV
+                  <Download size={18} />
+                </Button>
+              </a>
               {/* socials */}
               <Socials
                 containerStyles="flex gap-x-6 mx-auto mt-1 lg:flex-col xl:ml-0 "
@@ -70,9 +75,9 @@ const Hero = () => {
         >
           <RiArrowDownSLine className="text-3xl text-primary" />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
 
-export default Hero;
+export default dynamic(() => Promise.resolve(Hero), { ssr: false });

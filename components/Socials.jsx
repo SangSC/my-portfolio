@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const icons = [
   {
-    path: "/",
+    path: "https://github.com/SangSC",
     name: <RiGithubFill />,
   },
 ];

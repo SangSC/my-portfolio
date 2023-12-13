@@ -4,6 +4,7 @@
 
 import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
 import { HydrationProvider, useHydrated } from "react-hydration-provider";
+import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
 // components
@@ -18,7 +19,12 @@ const Contact = () => {
   return (
     <HydrationProvider>
       <section>
-        <div className="flex flex-col lg:flex-row lg:items-center mt-12 mb-12">
+        <motion.div
+          className="flex flex-col lg:flex-row lg:items-center mt-12 mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
           {/* left: comment */}
           <div className="w-[30%] min-w-[350px] flex flex-col mx-auto justify-center xl:ml-40">
             <div className="flex items-center gap-x-4 text-primary text-lg mb-4">
@@ -38,7 +44,7 @@ const Contact = () => {
           <div className="w-[40%] min-w-[400px] mx-auto xl:mr-40">
             <ContactForm />
           </div>
-        </div>
+        </motion.div>
         {/* </div> */}
       </section>
     </HydrationProvider>

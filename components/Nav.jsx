@@ -13,10 +13,11 @@ const links = [
   { path: "/contact", name: "contact" },
 ];
 
+// 底線會跟著動的
 const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
   const path = usePathname();
   return (
-    <motion.nav className={`${containerStyles}`}>
+    <nav className={`${containerStyles}`}>
       {links.map((link, index) => {
         return (
           <Link
@@ -24,21 +25,20 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
             key={index}
             className={`capitalize ${linkStyles}`}
           >
-            <motion.div
-              initial={{ opacity: 0, y: "-100%" }}
-              animate={{
-                opacity: link.path === path ? 1 : 0,
-                y: link.path === path ? 0 : "-100%",
-              }}
-              transition={{ type: "tween" }}
-              layoutId="underline"
-              className={`${underlineStyles}`}
-            />
+            {link.path === path && (
+              <motion.span
+                initial={{ y: "-100%" }}
+                animate={{ y: 0 }}
+                transition={{ type: "tween" }}
+                layoutId="underline"
+                className={`${underlineStyles}`}
+              />
+            )}
             {link.name}
           </Link>
         );
       })}
-    </motion.nav>
+    </nav>
   );
 };
 

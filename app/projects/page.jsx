@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
 
 const projectData = [
@@ -53,7 +54,14 @@ const Projects = () => {
 
   return (
     <section className="min-h-screen pt-12">
-      <div className="container mx-auto">
+      <motion.div
+        className="container mx-auto"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        layout
+        layoutRoot
+      >
         <h2 className="section-title mb-8 xl:mb-16 tracking-[4px] text-center mx-auto">
           My Projects
         </h2>
@@ -74,7 +82,11 @@ const Projects = () => {
             })}
           </TabsList>
           {/* tabs content */}
-          <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <motion.div
+            className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4"
+            layout
+            transition={{ delay: 0.1, duration: 0.3 }}
+          >
             {filterProjects.map((project, index) => {
               return (
                 <TabsContent value={category} key={index}>
@@ -82,9 +94,10 @@ const Projects = () => {
                 </TabsContent>
               );
             })}
-          </div>
+          </motion.div>
         </Tabs>
-      </div>
+      </motion.div>
+      <div className="lg:h-[50px]"></div>
     </section>
   );
 };
