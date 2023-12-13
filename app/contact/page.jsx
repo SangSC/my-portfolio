@@ -41,7 +41,7 @@ const Contact = () => {
             </div>
           </div>
           {/* right: contact form */}
-          <div className="w-[40%] min-w-[400px] mx-auto xl:mr-40">
+          <div className="w-[40%] min-w-[350px] mx-auto xl:mr-40">
             <ContactForm />
           </div>
         </motion.div>
