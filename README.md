@@ -1,10 +1,14 @@
-My Portfolio
+#[My Portfolio](https://sangsc-portfolio.vercel.app/)
 
-This portfolio is primarily inspired by the following video:
+![portfolio](https://i.imgur.com/gBk0Ylp.jpg)
+
+
+
+This portfolio is inspired by the following video:
 [https://youtu.be/Rew98iFupBM?si=_9YazIO5ac2EKWfI](https://youtu.be/Rew98iFupBM?si=_9YazIO5ac2EKWfI)
 
 Tools used:
-- React and Next.js
+- React - Next.js
 - Tailwind CSS
 - Node.js
 - Shadcn UI
@@ -15,8 +19,7 @@ Key features include:
 - Responsive Web Design (RWD)
 - Dark mode
 - Email sending functionality
-
-
+  
 
 
 
