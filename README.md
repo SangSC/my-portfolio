@@ -1,4 +1,4 @@
-#[My Portfolio](https://sangsc-portfolio.vercel.app/)
+# [My Portfolio](https://sangsc-portfolio.vercel.app/)
 
 ![portfolio](https://i.imgur.com/gBk0Ylp.jpg)
 
