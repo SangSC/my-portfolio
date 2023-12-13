@@ -1,3 +1,28 @@
+My Portfolio
+
+This portfolio is primarily inspired by the following video:
+[https://youtu.be/Rew98iFupBM?si=_9YazIO5ac2EKWfI](https://youtu.be/Rew98iFupBM?si=_9YazIO5ac2EKWfI)
+
+Tools used:
+- React and Next.js
+- Tailwind CSS
+- Node.js
+- Shadcn UI
+- Framer-Motion
+- EmailJS
+
+Key features include:
+- Responsive Web Design (RWD)
+- Dark mode
+- Email sending functionality
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
