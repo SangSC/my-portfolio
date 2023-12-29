@@ -109,7 +109,7 @@ const About = () => {
         <div className="flex flex-col justify-center items-center xl:flex-row">
           {/* tabs */}
           <div className="flex-1 xl:flex xl:justify-center">
-            <Tabs defaultValue="personal">
+            <Tabs defaultValue="skills">
               <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border xl:dark:border ">
                 <TabsTrigger className="w-[162px]" value="personal">
                   Personal Info
