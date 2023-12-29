@@ -33,6 +33,13 @@ const projectData = [
     description: "My Portfolio",
     github: "https://github.com/SangSC/my-portfolio",
   },
+  {
+    image: "/work/5.jpg",
+    category: "Next.JS",
+    name: "BUMP PR Site",
+    description: "In production.",
+    github: "https://github.com/SangSC/bump-pr-site",
+  },
 ];
 
 // remove category duplicates

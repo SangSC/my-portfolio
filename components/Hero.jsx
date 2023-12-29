@@ -20,14 +20,14 @@ import Socials from "./Socials";
 
 const Hero = () => {
   return (
-    <section className="py-6 xl:py-10 h-[84vh] xl:pt-10 bg-hero bg-no-repeat bg-bottom dark:bg-none">
+    <section className=" py-6 xl:py-10 xl:pt-10 bg-hero bg-repeat-x bg-bottom dark:bg-none ">
       <motion.div
         className="container mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="flex justify-between gap-x-8">
+        <div className="flex justify-between gap-x-8 2xl:justify-center 2xl:gap-x-16">
           {/* image */}
           <div className="hidden xl:flex relative">
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-20 -left-2 "></div>
@@ -70,7 +70,7 @@ const Hero = () => {
         </div>
         {/* icon */}
         <div
-          className="hidden sm:flex absolute left-[48%] bottom-40 md:bottom-12 animate-bounce
+          className="hidden sm:flex absolute left-[48%] bottom-40 md:bottom-10 animate-bounce
         "
         >
           <RiArrowDownSLine className="text-3xl text-primary" />

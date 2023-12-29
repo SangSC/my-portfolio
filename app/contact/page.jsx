@@ -18,15 +18,15 @@ function MyComponent() {
 const Contact = () => {
   return (
     <HydrationProvider>
-      <section>
+      <section className=" container mx-auto">
         <motion.div
-          className="flex flex-col lg:flex-row lg:items-center mt-12 mb-12"
+          className="flex flex-col lg:flex-row lg:items-center mt-12 mb-12 xl:mb-32 2xl:h-[420px] 3xl:h-[640px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           {/* left: comment */}
-          <div className="w-[30%] min-w-[350px] flex flex-col mx-auto justify-center xl:ml-40">
+          <div className="w-[30%] min-w-[350px] w-max-[400px] flex flex-col mx-auto justify-center xl:ml-40 2xl:ml-60 3xl:ml-80">
             <div className="flex items-center gap-x-4 text-primary text-lg mb-4">
               <span className="w-[30px] h-[2px] bg-primary"></span>
               Please feel free to contact me 😆
@@ -41,7 +41,7 @@ const Contact = () => {
             </div>
           </div>
           {/* right: contact form */}
-          <div className="w-[40%] min-w-[350px] mx-auto xl:mr-40">
+          <div className="w-[40%] min-w-[350px] max-w-[550px] max-h-[550px] mx-auto xl:mr-40 2xl:mr-80">
             <ContactForm />
           </div>
         </motion.div>
