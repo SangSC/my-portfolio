@@ -18,7 +18,7 @@ function MyComponent() {
 const Contact = () => {
   return (
     <HydrationProvider>
-      <section className=" container mx-auto">
+      <section>
         <motion.div
           className="flex flex-col lg:flex-row lg:items-center mt-12 mb-12 xl:mb-32 2xl:h-[420px] 3xl:h-[640px]"
           initial={{ opacity: 0 }}
