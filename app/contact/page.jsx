@@ -20,7 +20,7 @@ const Contact = () => {
     <HydrationProvider>
       <section>
         <motion.div
-          className="flex flex-col lg:flex-row lg:items-center mt-12 mb-12 xl:mb-32 2xl:h-[420px] 3xl:h-[640px]"
+          className="flex flex-col h-[75vh] lg:flex-row lg:items-center mt-12 mb-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -41,7 +41,7 @@ const Contact = () => {
             </div>
           </div>
           {/* right: contact form */}
-          <div className="w-[40%] min-w-[350px] max-w-[550px] max-h-[550px] mx-auto xl:mr-40 2xl:mr-80">
+          <div className="w-[40%] min-w-[350px] max-w-[550px] max-h-[700px] mx-auto xl:mr-40 2xl:mr-80">
             <ContactForm />
           </div>
         </motion.div>

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 import ProjectCard from "@/components/ProjectCard";
 
 const projectData = [
@@ -62,12 +63,11 @@ const Projects = () => {
   return (
     <section className="min-h-screen pt-12">
       <motion.div
+        variants={fadeIn("up", 0.4)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3 }}
         className="container mx-auto"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        layout
-        layoutRoot
       >
         <h2 className="section-title mb-8 xl:mb-16 tracking-[4px] text-center mx-auto">
           My Projects
