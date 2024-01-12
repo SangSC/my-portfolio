@@ -17,25 +17,40 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projectData = [
   {
-    image: "/work/1.jpg",
+    image: "/work/bump-pr-site.jpg",
+    category: "Next.JS",
+    name: "BUMP PR Site",
+    description: "BUMP TOUR Unofficial Promotion Site.",
+    github: "https://github.com/SangSC/bump-pr-site",
+  },
+  {
+    image: "/work/snake-game.jpg",
     category: "JavaScript",
     name: "Snake Game",
     description: "Simple snake game with basic controls.",
     github: "https://github.com/SangSC/snake-game",
   },
   {
-    image: "/work/2.jpg",
+    image: "/work/music-player.jpg",
+    category: "JavaScript",
+    name: "Music Player",
+    description: "Music player with basic controls.",
+    github: "https://github.com/SangSC/music-player",
+  },
+  {
+    image: "/work/video-player.jpg",
     category: "JavaScript",
     name: "Video Player",
     description: "Video player with basic controls.",
     github: "https://github.com/SangSC/video-player",
   },
+
   {
-    image: "/work/3.jpg",
-    category: "JavaScript",
-    name: "Music Player",
-    description: "Music player with basic controls.",
-    github: "https://github.com/SangSC/music-player",
+    image: "/work/porfolio.jpg",
+    category: "Next.JS",
+    name: "Portfolio",
+    description: "My Portfolio",
+    github: "https://github.com/SangSC/my-portfolio",
   },
 ];
 
@@ -66,7 +81,7 @@ const Work = () => {
             pagination={{ clickable: true }}
           >
             {/* show only 3 projects */}
-            {projectData.slice(0.4).map((project, index) => {
+            {projectData.slice(0, 3).map((project, index) => {
               return (
                 <SwiperSlide key={index}>
                   <ProjectCard project={project} />
